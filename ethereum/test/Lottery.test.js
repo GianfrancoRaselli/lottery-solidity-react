@@ -8,7 +8,7 @@ let accounts;
 let lottery;
 
 beforeEach(async () => {
-  accounts = await web3.eth.getAccounts();console.log(accounts)
+  accounts = await web3.eth.getAccounts();
 
   lottery = await new web3.eth.Contract(abi)
     .deploy({ data: evm.bytecode.object })
